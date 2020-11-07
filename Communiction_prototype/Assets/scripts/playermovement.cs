@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using Mirror;
 
-public class playermovement : MonoBehaviour
+public class playermovement : NetworkBehaviour
 {
     public float walkingSpeed = 7.5f;
     public float runningSpeed = 11.5f;
@@ -24,13 +24,20 @@ public class playermovement : MonoBehaviour
 
     void Start()
     {
+        if (!hasAuthority)
+            Destroy(this);
         characterController = GetComponent<CharacterController>();
 
      
     }
+    public override void OnStartAuthority()
+    {
+        base.OnStartAuthority();
+    }
 
     void Update()
     {
+        if (!hasAuthority) return;
         // We are grounded, so recalculate move direction based on axes
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
@@ -49,15 +56,7 @@ public class playermovement : MonoBehaviour
         {
             moveDirection.y = movementDirectionY;
         }
-
-       // if (Input.GetKeyDown("M"))
-       // {
-       //     mapImage.SetActive(true);
-       // }
-      //  if (Input.GetKeyUp("M"))
-      //  {
-     //       mapImage.SetActive(false);
-      //  }
+  
         if (!characterController.isGrounded)
         {
             moveDirection.y -= gravity * Time.deltaTime;

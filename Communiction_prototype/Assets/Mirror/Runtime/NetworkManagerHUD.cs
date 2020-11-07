@@ -83,7 +83,7 @@ namespace Mirror
                     if (GUILayout.Button("Host (Server + Client)"))
                     {
                         manager.StartHost();
-                        Destroy(blah);
+                     //   blah.SetActive(false);
                     }
                 }
 
@@ -139,6 +139,7 @@ namespace Mirror
                 if (GUILayout.Button("Stop Host"))
                 {
                     manager.StopHost();
+                 //  blah.SetActive(true);
                 }
             }
             // stop client if client-only
@@ -147,6 +148,7 @@ namespace Mirror
                 if (GUILayout.Button("Stop Client"))
                 {
                     manager.StopClient();
+                //    blah.SetActive(true);
                 }
             }
             // stop server if server-only
