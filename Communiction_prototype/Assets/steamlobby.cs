@@ -11,9 +11,11 @@ public class steamlobby : MonoBehaviour
     protected Callback<GameLobbyJoinRequested_t> gamelobbyjoinrequested;
     protected Callback<LobbyEnter_t> lobbyentered;
     private network networkmanager;
+   // private playerspawnsystem spawn;
     private const string Hostaddresskey = "HostAddress";
     public void Start()
     {
+     //   spawn = GetComponent<playerspawnsystem>();
         networkmanager = GetComponent<network>();
         if(!SteamManager.Initialized) { return; }
         lobbycreated = Callback<LobbyCreated_t>.Create(OnlobbyCreated);
@@ -34,7 +36,7 @@ public class steamlobby : MonoBehaviour
             return;
         }
         networkmanager.StartHost();
-
+       // spawn.spawnplayerone();
         SteamMatchmaking.SetLobbyData(new CSteamID(callback.m_ulSteamIDLobby), Hostaddresskey, SteamUser.GetSteamID().ToString());
     }
     private void OnGameLobbyJoinRequested(GameLobbyJoinRequested_t callback)
@@ -49,7 +51,7 @@ public class steamlobby : MonoBehaviour
 
         networkmanager.networkAddress = hostaddress;
         networkmanager.StartClient();
-
+       // spawn.spawnplayertwo();
         buttons.SetActive(false);
     }
 }

@@ -13,11 +13,13 @@ public class playermovement : NetworkBehaviour
     public float lookSpeed = 2.0f;
     public float lookXLimit = 45.0f;
 
+    public GameObject Map;
+
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
 
-    public GameObject mapImage;
+    
 
     [HideInInspector]
     public bool canMove = true;
