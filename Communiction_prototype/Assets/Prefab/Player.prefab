@@ -123,6 +123,7 @@ MonoBehaviour:
   lookSpeed: 2
   lookXLimit: 45
   Map: {fileID: 0}
+  characterController: {fileID: 3199889572606042551}
   canMove: 1
 --- !u!143 &3199889572606042551
 CharacterController:
