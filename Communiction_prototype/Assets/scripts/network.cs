@@ -11,6 +11,7 @@ public class network : NetworkManager
    // [SerializeField] private GameObject playerspawnsystem = null;
     // public static event Action<NetworkConnection> OnServerReadied;
     public static event Action<NetworkConnection> OnServerReadied;
+    public static event Action<NetworkConnection> onclientconnect;
  
     public override void OnStartClient()
     {
@@ -35,6 +36,11 @@ public class network : NetworkManager
         base.OnServerReady(conn);
 
         OnServerReadied?.Invoke(conn);
+    }
+    public override void OnClientConnect(NetworkConnection conn)
+    {
+        base.OnClientConnect(conn);
+        onclientconnect?.Invoke(conn);
     }
 
 }

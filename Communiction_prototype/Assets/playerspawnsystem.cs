@@ -14,7 +14,10 @@ public class playerspawnsystem : NetworkBehaviour
     //  [ServerCallback]
     // private void blip()=> network.
     public override void OnStartServer() => network.OnServerReadied += spawnplayerone;
-    
+    public override void OnStartClient() => network.onclientconnect += spawnplayertwo;
+   
+
+
     public void spawnplayerone(NetworkConnection conn)
       {
   GameObject Playerone = Instantiate(player1, spawnposition1.position, Quaternion.identity);
@@ -23,7 +26,7 @@ public class playerspawnsystem : NetworkBehaviour
 
        public void spawnplayertwo(NetworkConnection conn)
       {
-   GameObject PlayerTwo =    Instantiate(player2, spawnposition2.position, spawnposition2.rotation);
+   GameObject PlayerTwo = Instantiate(player2, spawnposition2.position, spawnposition2.rotation);
         NetworkServer.Spawn(PlayerTwo, conn);
      }
  //   [SerializeField] private GameObject PlayerPrefab = null;

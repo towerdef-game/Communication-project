@@ -122,7 +122,7 @@ MonoBehaviour:
   playerCamera: {fileID: 1390184478623582842}
   lookSpeed: 2
   lookXLimit: 45
-  mapImage: {fileID: 0}
+  Map: {fileID: 0}
   canMove: 1
 --- !u!143 &3199889572606042551
 CharacterController:
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
+  syncMode: 1
   syncInterval: 0.1
   clientAuthority: 0
   localPositionSensitivity: 0.01
