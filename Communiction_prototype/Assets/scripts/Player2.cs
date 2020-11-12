@@ -54,7 +54,7 @@ public class Player2 : MonoBehaviour
             float movementDirectionY = moveDirection.y;
             moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
-            if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
+            if (Input.GetKey(KeyCode.M) && canMove && characterController.isGrounded)
             {
                 moveDirection.y = jumpSpeed;
             }
