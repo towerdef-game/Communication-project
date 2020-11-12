@@ -36,7 +36,7 @@ public class steamlobby : MonoBehaviour
             return;
         }
         networkmanager.StartHost();
-       // spawn.spawnplayerone();
+     
         SteamMatchmaking.SetLobbyData(new CSteamID(callback.m_ulSteamIDLobby), Hostaddresskey, SteamUser.GetSteamID().ToString());
     }
     private void OnGameLobbyJoinRequested(GameLobbyJoinRequested_t callback)
