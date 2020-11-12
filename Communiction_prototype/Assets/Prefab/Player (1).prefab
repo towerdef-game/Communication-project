@@ -204,6 +204,7 @@ MonoBehaviour:
   lookXLimit: 45
   RotateSpeed: 100
   Map: {fileID: 2092818395117119346, guid: 175530e4b735b804ea98e66c33c0a72e, type: 3}
+  howto: {fileID: 0}
   canMove: 1
 --- !u!143 &8750239965401964808
 CharacterController:
@@ -237,5 +238,5 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0

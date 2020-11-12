@@ -18,7 +18,7 @@ public class playermovement : MonoBehaviour// NetworkBehaviour
   //  public Vector3 spawnpoint;
 
     public Image Map;
-
+    public GameObject howto;
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
  //   float rotationX = 0;
@@ -62,12 +62,13 @@ public class playermovement : MonoBehaviour// NetworkBehaviour
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
         {
             moveDirection.y = jumpSpeed;
+            howto.SetActive(false);
         }
         else
         {
             moveDirection.y = movementDirectionY;
         }
-  
+     
         if (!characterController.isGrounded)
         {
             moveDirection.y -= gravity * Time.deltaTime;
