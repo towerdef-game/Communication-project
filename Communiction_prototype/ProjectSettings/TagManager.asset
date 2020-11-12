@@ -3,10 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - death
-  - map1
-  - map2
+  tags: []
   layers:
   - Default
   - TransparentFX
