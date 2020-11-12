@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Intro_scene.unity
+    guid: 3984e753ca0756541aaf7b757e343d79
+  - enabled: 1
+    path: Assets/Scenes/Tomb diver.unity
+    guid: f67103575b7711540b3240266094192b
   m_configObjects: {}
