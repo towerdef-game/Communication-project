@@ -195,13 +195,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4dbd34e7a2dc14686cbef7cd04954e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkingSpeed: 7.5
-  runningSpeed: 11.5
-  jumpSpeed: 8
-  gravity: 20
+  walkingSpeed: 15
+  runningSpeed: 25
+  jumpSpeed: 10
+  gravity: 15
   lookSpeed: 2
   lookXLimit: 45
-  RotateSpeed: 60
+  RotateSpeed: 100
   Map: {fileID: 0}
   canMove: 1
 --- !u!143 &6812458082586038905
