@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Intro.unity
     guid: f47e29f1c47018b4298a4cdc531fbede
+  - enabled: 1
+    path: Assets/Scenes/Tomb diver.unity
+    guid: f67103575b7711540b3240266094192b
+  - enabled: 1
+    path: Assets/Scenes/finalscene.unity
+    guid: 9a51f78027285f54297afb7e33e54a7e
   m_configObjects: {}
